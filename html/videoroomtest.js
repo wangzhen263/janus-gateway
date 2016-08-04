@@ -396,7 +396,7 @@ function newRemoteFeed(id, display) {
 				if(event != undefined && event != null) {
 					if(event === "attached") {
 						// Subscriber created and attached
-						for(var i=1;i<6;i++) {
+						for(var i=1;i<12;i++) {
 							if(feeds[i] === undefined || feeds[i] === null) {
 								feeds[i] = remoteFeed;
 								remoteFeed.rfindex = i;

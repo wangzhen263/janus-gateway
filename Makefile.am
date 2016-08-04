@@ -287,6 +287,16 @@ conf_DATA += conf/janus.plugin.videoroom.cfg.sample
 EXTRA_DIST += conf/janus.plugin.videoroom.cfg.sample
 endif
 
+if ENABLE_PLUGIN_COVIUSFU
+plugin_LTLIBRARIES += plugins/libcoviu_sfu.la
+plugins_libcoviu_sfu_la_SOURCES = plugins/coviu_sfu.c
+plugins_libcoviu_sfu_la_CFLAGS = $(plugins_cflags)
+plugins_libcoviu_sfu_la_LDFLAGS = $(plugins_ldflags)
+plugins_libcoviu_sfu_la_LIBADD = $(plugins_libadd)
+conf_DATA += conf/janus.plugin.coviusfu.cfg.sample
+EXTRA_DIST += conf/janus.plugin.coviusfu.cfg.sample
+endif
+
 if ENABLE_PLUGIN_VOICEMAIL
 plugin_LTLIBRARIES += plugins/libjanus_voicemail.la
 plugins_libjanus_voicemail_la_SOURCES = plugins/janus_voicemail.c
